@@ -1,0 +1,16 @@
+service: aws-xray-example
+
+frameworkVersion: '2'
+
+
+provider:
+  tracing:
+    apiGateway: true
+    lambda: true
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  hello:
+    handler: handler.hello
